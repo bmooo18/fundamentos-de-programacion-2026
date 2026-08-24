@@ -9,6 +9,7 @@ Console.WriteLine("Tipo de texto: " + texto.GetType());
 int intVal = 42;
 Console.WriteLine("Tipo de intVal: " + intVal.GetType());
 
+Console.WriteLine("______________________________________________");
 // Variables de tipo implícito - agregar 2
 var num1 = 1_000_000_000_000_000_000;
 
@@ -20,6 +21,7 @@ Console.WriteLine("Tipo de precio: " + precio.GetType());
 var esValido = true;
 Console.WriteLine("Tipo de esValido: " + esValido.GetType());
 
+Console.WriteLine("______________________________________________");
 // Constantes - agregar 2 más
 const sbyte MIN_VALUE_SBYTE = -128;
 
