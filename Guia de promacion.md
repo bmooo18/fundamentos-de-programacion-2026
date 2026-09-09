@@ -10,61 +10,35 @@
 
 ```casharp
 Console.WriteLine("¿Cual es tu nombre?");
-string nombre = Console.ReadLine()
+string nombre = Console.ReadLine();
 Console.Write("Hola ");
-Console.Write(+ nombre +"!");
-Console.WriteLine(":)");
+Console.Write( nombre + "!");
+Console.WriteLine(" :)");
 ```
 
 * `Console.Read()` --> Leer las teclas
-
-```casharp
-// Solicitamos información al usuario
-Console WriteLine("Dame tu nombre: ");
-// Leemos de forma infinita
-while (true)
-{
-    Leemos caracter por caracter
-    int c = Console. Read();
-    
-    // EOF
-    // - Ctrl+Z en Windows
-    // - Ctrl+D en Linux/Mac
-    if (c =-1)
-        break;
-    // Salto de línea - Windows/Mac/Linux
-    if (c = "\n')
-        break;
-    // Retorno de carro - Windows, falta \n
-    if (c = "\r')
-        continue;
-    
-    // Imprimimos el número y el carácter 
-    Console WriteLine($" {c} → {(char)c}");
-}
-```
 
 * `Console.ReadKey()` --> leer un stream de texto
 
 ```casharp
 // Solicitamos información al usuario
-Console WriteLine("Dame tu nombre: ");
+Console.WriteLine("Dame tu nombre: ");
 
 // Leemos de forma infinita
-// Ctrl + z o F6 también termina el programa 
+// Ctrl + z o F6 también termina el programa
 while (true)
 {
     // Intercepta y muestra la tecla
     // var key = Console. ReadKey();
     // Intercepta y NO muestra la tecla
-    var key = Console.Readkey(true);
+    var key = Console.ReadKey(true);
 
     // Si presiona Enter, salimos del bucle
-    if(key. Key = Consolekey. Enter) 
+    if(key.Key == ConsoleKey. Enter)
     {
         break;
     }
-    
+
     // Mostramos la tecla presionada
     Console. Write(key.KeyChar);
 }
@@ -144,7 +118,7 @@ Console. ResetColor(); // Reiniciamos los colores
 sbyte minValorSbyte = SByte.MinValue;
 sbyte maxValorSbyte = SByte.MaxValue;
 
-Console.WriteLine("SByte:");
+Console.WriteLine("SByte");
 Console.WriteLine("Minimo: " + minValorSbyte);
 Console.WriteLine("Maximo: " + maxValorSbyte);
 ```
@@ -163,26 +137,26 @@ Console.WriteLine("Maximo: " + maxValorSbyte);
 * Simbolo de la division (-) devuelve el valor negado del valor (-num1)
 ```casharp
   //Operaciones Unarias: + y
-  // Dependiendo de si es sufijo o prefijo, el resultado cambia
-  //El ejemplo siguiente aplica tanto para la suma (++) como para la resta (-)
-  
-  var original = 10; // Comenzamos con 10 entero
-  // ++ o -- como SUFIJO
-  // 1. Se guarda el valor de la operación 5 + 10 en 'num2' (Original = 10)
-  // 2. Se incrementa el valor de 'original' en 1, y se guarda en 'original'
-  // Resultado: num2 = 5 + 10 = 15 y original = 10 + 1 = 11
-   var num2 = 5 + originalt; // num2 = 15
-   
-  //Original vale 11 ahora
-  // * -- como PREFIJO
-  // 1. Se incrementa el valor de 'original' en 1, y se guarda en 'original'
-  // 2. Se guarda el valor de la operación 5 + 12 en 'num3' (Oriğinal = 12)
-  // Resultado: original = 12 + 1 = 13 y num3 = 5 + 12 = 17
-  var num3 = 5 + #original; // num3 = 17
-   
-  // Original vale 12 ahora
-  // Sugerencia: No utilizar + o -- como parte de una operación aritmética
-  //             Realiza en incremento/decremento antes o después de form explícita
+// Dependiendo de si es sufijo o prefijo, el resultado cambia
+//El ejemplo siguiente aplica tanto para la suma (++) como para la resta (-)
+
+var original = 10;            // Comenzamos con 10 entero
+// ++ o -- como SUFIJO
+// 1. Se guarda el valor de la operación 5 + 10 en 'num2' (Original = 10)
+// 2. Se incrementa el valor de 'original' en 1, y se guarda en 'original'
+// Resultado: num2 = 5 + 10 = 15 y original = 10 + 1 = 11
+var num2     = 5 + original; // num2 = 15
+
+//Original vale 11 ahora
+// * -- como PREFIJO
+// 1. Se incrementa el valor de 'original' en 1, y se guarda en 'original'
+// 2. Se guarda el valor de la operación 5 + 12 en 'num3' (Oriğinal = 12)
+// Resultado: original = 12 + 1 = 13 y num3 = 5 + 12 = 17
+var num3 = 5 + original; // num3 = 17
+
+// Original vale 12 ahora
+// Sugerencia: No utilizar + o -- como parte de una operación aritmética
+//             Realiza en incremento/decremento antes o después de form explícita
 ```
 
 ### Tipo de datos
@@ -330,7 +304,7 @@ Console.WriteLine();
 
 // Elimina los espacios al inicio y al final
 string eliminarEspacioInicoFin = cadena.Trim();
-Console.WriteLine("eliminar espacios al inicio y al final: " + eliminarEspacioInicoFin); //
+Console.WriteLine("eliminar espacios al inicio y al final: " + eliminarEspacioInicoFin); 
 ```
 
 * char: cadenas de caracteres  (' ')
@@ -354,20 +328,20 @@ Console.WriteLine("eliminar espacios al inicio y al final: " + eliminarEspacioIn
 * CONCATENACION - Utiliza el signo + para concatenar
 ```casharp
 var sentencias = 6;
-var cadenal = "Hola";
-var cadena2 = "mundo";
+var cadena1    = "Hola";
+var cadena2    = "mundo";
 
 Console. WriteLine(cadena1 + " " + cadena2 + "!" );
-" Console.WriteLine("Este programa tiene " + sentencias + " sentencias." );
+Console.WriteLine("Este programa tiene " + sentencias + " sentencias." );
 ```
 
 * INTERPOLACIÓN - Utiliza el signo $ para denotarlo y los valores encerrados en llaves { }
 ```casharp
 var sentencias = 6;
-var cadena1 = "Hola"
+var cadena1 = "Hola";
 var cadena2 = "mundo";
 
-Console.WriteLine($"{cadena1} {cadena2)!");
+Console.WriteLine($"{cadena1} {cadena2}");
 Console. WriteLine($"Este programa tiene {sentencias} sentencias.");
 ```
 
@@ -377,17 +351,17 @@ Console. WriteLine($"Este programa tiene {sentencias} sentencias.");
 ```casharpe
 // De string a entero
 string intStr = "123";
-int numVal • int.Parse(intStr);
+int numVal = int.Parse(intStr);
 
 // Genera un error, el valor no se puede convertir
 // HOLA → No tiene sentido convertirla a un número
 string str = "Hola";
-int strval = int. Parse(str);
+int    strval = int. Parse(str);
 
 // Podemos convertir la entrada del usuario
-Console. Write("Dame un número: ");
-string input = Console. ReadLine();
-float floatval = float. Parse( input);
+Console.Write("Dame un número: ");
+string input = Console.ReadLine();
+float  floatVal = float.Parse(input);
 ```
 * TryParse --> 
 
@@ -424,8 +398,6 @@ if (int. TryParse(str, out int strval))
 
 ```casharpe
 // Si la calificacion es aprobatoria o no 
-
-using System.Security.Cryptography;
 
 Random rnd = new Random();
 int calificacion = rnd.Next(0,10);
@@ -523,6 +495,26 @@ case OPCION1:
     default:
     // Se ejecuta para cualquier otra opción  
         break;
+        
+      
+        
+char calificacion = 'B';
+switch (calificacion)
+{
+    case 'A':
+        Console.WriteLine(" ¡Excelente!");
+        break;
+    case 'B':
+    case 'C':
+        Console.WriteLine("Aprobado con buen nivel.' break");
+    case 'D':
+    case 'F':
+        Console.WriteLine("Reprobado o en riesgo.");
+        break;
+    default:
+        Console.WriteLine("Calificación no válida.");
+        break;
+}
 ```
 
 ### 8. Un flujo breve para analizar y resolver problemas
