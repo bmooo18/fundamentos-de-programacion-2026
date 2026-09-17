@@ -889,5 +889,22 @@ for (int i = 0; i < 10; i++)
 ________________________________________________________________________________________
 
 ## 9. Arreglos
+[ Arreglos Guia]([texto](https://drive.google.com/file/d/1tdg-LGUZC-kQIld2LdI13LaX1VVOIgLS/view))
 
-* 
+
+Un arreglo (array) es una estructura que permite almacenar múltiples valores del mismo tipo bajo un
+solo nombre. Cada valor se guarda en una posición identificada por un índice numérico.
+
+* Un arreglo guarda muchos valores del mismo tipo.
+
+
+* Usa variables -->  cuando solo necesitas un valor individual.
+* Usa arreglos 1D --> cuando necesitas varios valores del mismo tipo.
+* Usa 2D cuando --> tus datos tienen forma de tabla o mapa.
+* Usa 3D cuando --> representas espacio o estructuras volumétricas.
+* Arreglos Jagged (Irregulares) --> es una estantería irregular: cada fila tiene un número diferente de cajas
+
+________________________________________________________________________________________
+
+## 10. Listas
+[ Listas Guia]([texto](https://drive.google.com/file/d/1eVRmnJ_BeLmfcOjMeBdSdBzYiEwrV3uE/view))
