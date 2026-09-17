@@ -1,5 +1,67 @@
 # Guia de programacion
 
+## Referencias rapidas para el Markdown
+
+| Objetivo          |                                    Markdown |
+|:------------------|--------------------------------------------:|
+| Encabezado 1      |                                # Encabezado |
+| Negrita           |                               ## Encabezado |
+| Negrita           |                                 **texto**   |
+| Cursiva           |                                     *texto* |
+| Negrita + cursiva |                                 ***texto*** |
+| Tachado           |                                   ~~texto~~ |
+| Enlace            | [ Encabezado]([texto](https://example.com)) |
+| Imagen            |                          ![alt](imagen.png) |
+| Código en línea   |                                    `código` |
+| Cita              |                                      > cita |
+| Viñeta            |                                  - elemento |
+| Elemento numerado |                                 1. elemento |
+| Tarea             |                                 - [ ] tarea |
+| Línea horizontal  |                                         --- |
+
+________________________________________________________________________________________
+
+## Un flujo breve para analizar y resolver problemas
+
+
+* Paso 1: Comprender el problema
+* Identificar datos de entrada
+* Identificar datos de salida
+* Identificar restricciones
+
+
+* Paso 2: Diseñar el algoritmo
+* Escribir pasos en pseudocódigo
+* Identificar operaciones necesarias
+
+
+* Paso 3: Implementar
+* Escribir código
+* Usar nombres descriptivos
+* Agregar comentarios
+
+
+* Paso 4: Probar
+* Probar con valores válidos
+* Probar con valores límite
+* Probar con valores inválidos
+
+
+* Paso 5: Refinar
+* Eliminar redundancias
+* Mejorar legibilidad
+
+________________________________________________________________________________________
+
+## Una referencia breve para debugging, es decir, qué hacer si mi programa no funciona.
+
+
+* Leer mensajes de error (indican problema y línea)
+* Usar Console.WriteLine para mostrar valores intermedios
+* Validar entrada del usuario
+* Probar con casos simples
+
+________________________________________________________________________________________
 
 ## 1. Entrada y salida por consola
 
@@ -74,6 +136,8 @@ while (true)
 
 ```
 
+________________________________________________________________________________________
+
 ## 2. Secuencia de escape
 Utilizando dentro de la cadena, es posible hacer que tanto Console. Write como Console. WriteLine muestran caracteres que de otra forma no son posibles.
 
@@ -96,8 +160,37 @@ Console.WriteLine("/ Gold \t2,500    /");
 Console.WriteLine("\\ Exp \t150      \\");
 ```
 
+________________________________________________________________________________________
 
-## 3. Colores de fondo y texto en consola
+## 3. Mostrar valores en una cadenas
+
+
+* CONCATENACIÓN - Utiliza el signo + para concatenar
+```casharp
+var sentencias = 6;
+var cadena1    = "Hola";
+var cadena2    = "mundo";
+
+
+Console. WriteLine(cadena1 + " " + cadena2 + "!" );
+Console.WriteLine("Este programa tiene " + sentencias + " sentencias." );
+```
+
+
+* INTERPOLACIÓN - Utiliza el signo $ para denotar y los valores encerrados en llaves { }
+```casharp
+var sentencias = 6;
+var cadena1 = "Hola";
+var cadena2 = "mundo";
+
+
+Console.WriteLine($"{cadena1} {cadena2}");
+Console. WriteLine($"Este programa tiene {sentencias} sentencias.");
+```
+
+________________________________________________________________________________________
+
+## 4. Colores de fondo y texto en consola
 La consola utiliza colores por defecto, por lo general:
 * Fondo: Negro
 * Texto: Blanco
@@ -146,14 +239,15 @@ Console. Write("CO");
 
 Console. ResetColor(); // Reiniciamos los colores
 ```
+________________________________________________________________________________________
 
-
-## 4. Variables y tipos de Dato
+## 5. Variables y tipos de Dato
 
 
 Variable: Guarda información que puede cambiar
 * variable nameMe
-  Constante: Guarda información que NO puede cambiar
+
+Constante: Guarda información que NO puede cambiar
 * const variable NAME_ME
 
 
@@ -420,35 +514,9 @@ Console.WriteLine("eliminar espacios al inicio y al final: " + eliminarEspacioIn
 * Y, AND (&&) Determina si dos valores son verdaderos (true && true) = true
 * O, OR (||) Determina si uno de dos valores es verdadero (true || false) = true
 
+________________________________________________________________________________________
 
-### 5. Mostrar valores en una cadenas
-
-
-* CONCATENACIÓN - Utiliza el signo + para concatenar
-```casharp
-var sentencias = 6;
-var cadena1    = "Hola";
-var cadena2    = "mundo";
-
-
-Console. WriteLine(cadena1 + " " + cadena2 + "!" );
-Console.WriteLine("Este programa tiene " + sentencias + " sentencias." );
-```
-
-
-* INTERPOLACIÓN - Utiliza el signo $ para denotar y los valores encerrados en llaves { }
-```casharp
-var sentencias = 6;
-var cadena1 = "Hola";
-var cadena2 = "mundo";
-
-
-Console.WriteLine($"{cadena1} {cadena2}");
-Console. WriteLine($"Este programa tiene {sentencias} sentencias.");
-```
-
-
-### 6. Conversiones entre tipos de dato, incluyendo parsing
+## 6. Conversiones entre tipos de dato, incluyendo parsing
 * Parse --> realizar una conversión de cadena a numeros
 ```casharpe
 // De string a entero
@@ -497,9 +565,9 @@ if (int. TryParse(str, out int strval))
        Console.WriteLine($"Error '(str)' no es válido");
    }
 ```
+________________________________________________________________________________________
 
-
-### 7. Condicionales: `if`, `else`, `else if` y `switch`
+## 7. Condicionales: `if`, `else`, `else if` y `switch`
 
 
 * If --> El if evalúa una condición booleana. Si es falso, el programa salta ese bloque
@@ -678,49 +746,9 @@ switch (calificacion)
        break;
 }
 ```
+________________________________________________________________________________________
 
-
-### 8. Un flujo breve para analizar y resolver problemas
-
-
-* Paso 1: Comprender el problema
-* Identificar datos de entrada
-* Identificar datos de salida
-* Identificar restricciones
-
-
-* Paso 2: Diseñar el algoritmo
-* Escribir pasos en pseudocódigo
-* Identificar operaciones necesarias
-
-
-* Paso 3: Implementar
-* Escribir código
-* Usar nombres descriptivos
-* Agregar comentarios
-
-
-* Paso 4: Probar
-* Probar con valores válidos
-* Probar con valores límite
-* Probar con valores inválidos
-
-
-* Paso 5: Refinar
-* Eliminar redundancias
-* Mejorar legibilidad
-
-
-### 9. Una referencia breve para debugging, es decir, qué hacer si mi programa no funciona.
-
-
-* Leer mensajes de error (indican problema y línea)
-* Usar Console.WriteLine para mostrar valores intermedios
-* Validar entrada del usuario
-* Probar con casos simples
-
-
-### 10. Ciclos
+## 8. Ciclos
 
 
 * while --> repite un bloque de código mientras la condición sea verdadera
@@ -857,3 +885,9 @@ for (int i = 0; i < 10; i++)
 // Omite el 4 por ser un continue y para al llegar al 8 (break)
 
 ```
+
+________________________________________________________________________________________
+
+## 9. Arreglos
+
+* 
